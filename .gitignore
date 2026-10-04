@@ -1,0 +1,14 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Planning raw files & extracted files
+*.docx*
+*Google ドキュメント*
+*Google ドキュメント_files/
+extracted_doc.txt
+
+# Local temporary files
+.vercel/
+*.log
