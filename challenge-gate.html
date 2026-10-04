@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHALLENGE GATE｜OKAYAMA CHALLENGERS SUMMIT 2026 事前開発プログラム</title>
+  
+  <!-- SEO & OGP Meta Tags -->
+  <meta name="description" content="AIを活用し、身近な課題や社会課題をプロダクトへ。U24（高校生・大学生・高専生・若手）を対象とした2日間の集中開発プログラム「CHALLENGE GATE」参加者募集中！参加費無料・賞金総額20万円・初心者歓迎。成果は11/23 岡山大学 金光ホールの大舞台で発表！">
+  <meta name="keywords" content="CHALLENGE GATE, チャレンジゲート, OCS 2026, 桃下村塾, ハッカソン, 生成AI, アイデアソン, U24, 岡山大学">
+  <meta property="og:title" content="CHALLENGE GATE｜AIを活用したU24共創開発プログラム（賞金総額20万円・参加無料）">
+  <meta property="og:description" content="小さな火種を、大きな炎へ。アイデアを形にし、金光ホールのステージで社会に挑む。専任メンター伴走・初心者大歓迎！">
+  <meta property="og:type" content="article">
+  <meta name="theme-color" content="#070a12">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff6b2b'><path d='M12 2c-.5 2-2 4-4 5.5C6 9 5 11 5 13a7 7 0 0 0 14 0c0-2-1-4-3-5.5C14 6 12.5 4 12 2zm0 6c1.5 2 2.5 3 2.5 5a2.5 2.5 0 0 1-5 0c0-2 1-3 2.5-5z'/></svg>">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header / Navigation
+       ========================================================================= -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-flame">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">CHALLENGE GATE</span>
+          <span class="logo-sub">OCS 2026 PRE-PROGRAM</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">プログラム概要</a>
+        <a href="#schedule" class="nav-link">日程・フロー</a>
+        <a href="#prize" class="nav-link">賞金・表彰</a>
+        <a href="#criteria" class="nav-link">審査基準</a>
+        <a href="#briefing" class="nav-link">説明会情報</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          ← 本番サミットLP
+        </a>
+        <a href="#entry" class="btn btn-primary btn-sm" data-modal-target="modalGateEntry">
+          応募エントリー
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" class="mobile-nav-link" style="color: var(--flame-gold);">← OCS 2026 本番サミットLP</a>
+    <a href="#about" class="mobile-nav-link">プログラム概要 (About)</a>
+    <a href="#schedule" class="mobile-nav-link">日程・制作フロー (Schedule)</a>
+    <a href="#prize" class="mobile-nav-link">賞金総額20万円 (Prize)</a>
+    <a href="#criteria" class="mobile-nav-link">審査方針・6観点 (Criteria)</a>
+    <a href="#briefing" class="mobile-nav-link">事前オンライン説明会 (Briefing)</a>
+    <a href="#faq" class="mobile-nav-link">よくある質問 (FAQ)</a>
+    <div style="margin-top: 20px;">
+      <a href="#" class="btn btn-primary" style="width: 100%;" data-modal-target="modalGateEntry">今すぐ応募する（無料）</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         Hero Section
+         ======================================================================= -->
+    <section class="hero" id="hero">
+      <canvas id="particleCanvas"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-organizer-pill">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            OKAYAMA CHALLENGERS SUMMIT 2026 事前開発プログラム
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          自分の「問い」から、<br class="mobile-break">
+          <span class="text-gradient">社会を動かすモノを創る。</span>
+        </h1>
+
+        <div class="hero-tagline">
+          AI × 実装ハッカソン × 課題解決ピッチ
+        </div>
+
+        <p class="hero-lead">
+          2日間の集合プログラムと制作期間を通して、身近な課題や地域・社会の課題をAIで形にする実践プログラム。<br>
+          初心者歓迎・個人応募可・参加無料。11月23日、岡山大学 金光ホールの大舞台で社会へ成果を解き放とう！
+        </p>
+
+        <!-- Dates Card Grid -->
+        <div class="hero-meta-grid">
+          <div class="hero-meta-box">
+            <div class="meta-box-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="18" y2="10"></line></svg>
+              DAY 1 &amp; DAY 2（集合開発）
+            </div>
+            <div class="meta-box-date">11.07 [SAT] &amp; 11.21 [SAT]</div>
+            <div class="meta-box-place">10:00〜17:00 @ 岡山大学 KIBINOVE（20時まで開放）</div>
+          </div>
+
+          <div class="hero-meta-box">
+            <div class="meta-box-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              本番ピッチ成果発表
+            </div>
+            <div class="meta-box-date">2026.11.23 [MON・祝]</div>
+            <div class="meta-box-place">岡山大学 金光ホール（300名の観客の前で登壇）</div>
+          </div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="hero-countdown">
+          <div class="countdown-title" id="countdownLabel">
+            <span class="badge-dot"></span>
+            CHALLENGE GATE 応募締切（10月30日 23:59）まで
+          </div>
+          <div class="countdown-timer">
+            <div class="timer-unit">
+              <span class="timer-number" id="days">--</span>
+              <span class="timer-label">DAYS</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="hours">--</span>
+              <span class="timer-label">HOURS</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="minutes">--</span>
+              <span class="timer-label">MINUTES</span>
+            </div>
+            <div class="timer-separator">:</div>
+            <div class="timer-unit">
+              <span class="timer-number" id="seconds">--</span>
+              <span class="timer-label">SECONDS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-cta-group" id="entry">
+          <a href="#" class="btn btn-primary btn-lg" data-modal-target="modalGateEntry">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            CHALLENGE GATE に応募する（参加無料）
+          </a>
+          <a href="#briefing" class="btn btn-secondary btn-lg">
+            オンライン説明会の日程を見る
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         About Section
+         ======================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ABOUT CHALLENGE GATE</span>
+          <h2 class="section-title">CHALLENGE GATE とは</h2>
+          <p class="section-desc">
+            若者が「自分にも挑戦できる」と実感し、最初の一歩を踏み出すための共創型開発プログラム。
+          </p>
+        </div>
+
+        <div class="gate-features-grid">
+          <div class="gate-feature-item">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <h4>U24なら誰でも対象</h4>
+            <p>2026年度において24歳以下の方なら、高校生・高専生・大学生・大学院生・若手社会人どなたでも歓迎！</p>
+          </div>
+
+          <div class="gate-feature-item">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h4>参加費無料 &amp; AI補助</h4>
+            <p>参加費は無料。さらにAIサービス利用料の補助予算（総額25,000円）を用意。PC所持状況も配慮・相談対応します。</p>
+          </div>
+
+          <div class="gate-feature-item">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h4>個人応募・チーム応募OK</h4>
+            <p>1人参加でも大丈夫。関心のある課題や専門性を考慮して、運営が最高のチームビルディングをサポートします。</p>
+          </div>
+
+          <div class="gate-feature-item">
+            <div class="feature-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h4>専任メンターが1対1伴走</h4>
+            <p>全8チームそれぞれに桃下村塾メンバー等のメンターが1名配置され、アイデア創出から実装・ピッチまで支えます。</p>
+          </div>
+        </div>
+
+        <!-- 4 Objectives Box -->
+        <div class="glass-card" style="padding: 36px; margin-top: 30px;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--flame-gold);">
+            CHALLENGE GATE が掲げる 4つの目的
+          </h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--flame-orange); font-size: 1.3rem; font-weight: 800;">01</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">挑戦への第一歩の実感</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">若者が「自分にも挑戦できる」と心から実感し、最初の一歩を踏み出すきっかけをつくります。</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--flame-orange); font-size: 1.3rem; font-weight: 800;">02</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">AIを価値創出の道具へ</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">AIを単なる流行ではなく、課題解決や価値創出の強力な手段として使い倒す生きた経験を提供します。</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--flame-orange); font-size: 1.3rem; font-weight: 800;">03</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">異分野・異世代の協働</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">異なる学校・学年・専門性を持つ仲間が集い、対話を重ねてアイデアを形にする経験を生み出します。</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 14px;">
+              <div style="color: var(--flame-orange); font-size: 1.3rem; font-weight: 800;">04</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: #fff; margin-bottom: 4px;">社会とつながる晴れ舞台</h4>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">11月23日のOCS本番で、若者の熱気と挑戦を企業・大学・社会人・メディアへ直接発信します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Schedule & Flow Section
+         ======================================================================= -->
+    <section class="section section-darker" id="schedule">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ROADMAP &amp; SCHEDULE</span>
+          <h2 class="section-title">2日間の集合プログラム &amp; 制作フロー</h2>
+          <p class="section-desc">
+            インプットからアイデア創出、プロトタイプ実装、そして本番ピッチまでの全工程
+          </p>
+        </div>
+
+        <div class="gate-timeline-steps">
+          <div class="timeline-step-card">
+            <span class="timeline-step-badge">DAY 1 // 集合開発</span>
+            <div class="timeline-step-date">11/7(土) 10:00〜17:00</div>
+            <h4 class="timeline-step-title">キックオフ &amp; 開発スタート</h4>
+            <p class="timeline-step-desc">
+              会場：岡山大学 KIBINOVE<br>
+              ・オリエンテーション &amp; チームビルディング<br>
+              ・課題設定 &amp; アイデア創出<br>
+              ・AI活用方針の設計 &amp; メンター壁打ち<br>
+              ・プロトタイプ制作開始（※20時まで会場開放）
+            </p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="timeline-step-badge">INTERIM // 制作期間</span>
+            <div class="timeline-step-date">11/8(日) 〜 11/20(金)</div>
+            <h4 class="timeline-step-title">チーム開発・検証・改善</h4>
+            <p class="timeline-step-desc">
+              各チームによる継続制作・改善サイクル。<br>
+              オンラインツールや自主作業を通じてプロトタイプをブラッシュアップ。メンターもオンラインで随時相談に乗ります。
+            </p>
+          </div>
+
+          <div class="timeline-step-card">
+            <span class="timeline-step-badge">DAY 2 // 集合開発</span>
+            <div class="timeline-step-date">11/21(土) 10:00〜17:00</div>
+            <h4 class="timeline-step-title">最終ブラッシュアップ &amp; 発表準備</h4>
+            <p class="timeline-step-desc">
+              会場：岡山大学 KIBINOVE<br>
+              ・プロトタイプ機能の磨き上げ<br>
+              ・マイルストーン整理 &amp; ピッチスライド作成<br>
+              ・メンターとの壁打ち &amp; 模擬ピッチ<br>
+              ・11/23本番に向けた最終準備（※20時まで開放）
+            </p>
+          </div>
+
+          <div class="timeline-step-card" style="border-color: var(--border-glow); background: rgba(255,107,43,0.08);">
+            <span class="timeline-step-badge" style="color: var(--flame-gold);">FINAL // 本番サミット</span>
+            <div class="timeline-step-date">11/23(月・祝) 13:00〜</div>
+            <h4 class="timeline-step-title">金光ホールのステージで発表！</h4>
+            <p class="timeline-step-desc">
+              会場：岡山大学 金光ホール（300名規模）<br>
+              ・全8チームによる白熱のピッチバトル<br>
+              ・1チーム10分（発表6分＋質疑3分＋交代1分）<br>
+              ・賞金総額20万円の表彰式<br>
+              ・18:00〜 参加費無料のOCS交流会へ！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Prize Section
+         ======================================================================= -->
+    <section class="section" id="prize">
+      <div class="container">
+        <div class="prize-container">
+          <div class="prize-total-title">CHALLENGE GATE 賞金総額</div>
+          <div class="prize-total-amount">¥200,000</div>
+          
+          <div class="prize-grid">
+            <div class="prize-card grand">
+              <div class="prize-name">🏆 最優秀賞</div>
+              <div class="prize-val text-gold">¥100,000</div>
+              <div class="prize-note">最も熱量高く優れた成果を示した1チームへ贈られる最高栄誉</div>
+            </div>
+
+            <div class="prize-card">
+              <div class="prize-name">🎖️ プラチナ企業スポンサー賞</div>
+              <div class="prize-val">¥30,000 <span style="font-size: 1rem; font-weight: normal;">× 3社</span></div>
+              <div class="prize-note">計90,000円 / 協賛企業独自の評価観点で選ばれた3チームへ授与</div>
+            </div>
+
+            <div class="prize-card">
+              <div class="prize-name">✨ 特別村長賞</div>
+              <div class="prize-val">¥10,000</div>
+              <div class="prize-note">桃下村塾が贈る独自の挑戦スピリット・ブレイクスルー賞</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Criteria Section (審査基準)
+         ======================================================================= -->
+    <section class="section section-darker" id="criteria">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">EVALUATION CRITERIA</span>
+          <h2 class="section-title">審査方針・6つの評価観点</h2>
+          <p class="section-desc">
+            最重要評価軸は<strong>「自分を変えたい・岡山を変えたい・社会を変えたいという熱量と当事者性」</strong>。<br>
+            「なぜ自分がこの課題に挑むのか」を自らの言葉で語れているかを重視します。
+          </p>
+        </div>
+
+        <div class="criteria-grid">
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>01</span> 当事者性
+            </div>
+            <p class="criteria-desc">なぜ自分たちがこの課題に取り組むのか。自分ごととして捉え、挑戦する理由が明確か。</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>02</span> 熱量・プロセス
+            </div>
+            <p class="criteria-desc">主体的に行動し、試行錯誤や困難を通じて改善を重ねているか。</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>03</span> 解決策の妥当性
+            </div>
+            <p class="criteria-desc">提案する解決策が設定した課題に適切で、本質的な課題解決につながるか。</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>04</span> プロダクト完成度
+            </div>
+            <p class="criteria-desc">解決策の価値を具体的に示し、実際の利用を想定した機能や仕組みを実現しているか。</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>05</span> 将来性・拡張性
+            </div>
+            <p class="criteria-desc">継続的な改善・社会実装に向けた展望と、社会への価値の広がりがあるか。</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-title">
+              <span>06</span> 発表の完成度
+            </div>
+            <p class="criteria-desc">課題、解決策、制作過程、成果、今後の展望を分かりやすく伝えられるか。</p>
+          </div>
+        </div>
+
+        <!-- Pitch Timing Box -->
+        <div style="background: rgba(12, 17, 30, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 24px 30px; margin-top: 30px; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center;">
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.8rem;">プレゼンテーション</div>
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: #fff;">6分</div>
+          </div>
+          <div style="color: var(--flame-orange); font-size: 1.5rem;">+</div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.8rem;">質疑応答</div>
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: #fff;">3分</div>
+          </div>
+          <div style="color: var(--flame-orange); font-size: 1.5rem;">+</div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.8rem;">チーム交代</div>
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: #fff;">1分</div>
+          </div>
+          <div style="color: var(--flame-gold); font-size: 1.5rem;">=</div>
+          <div>
+            <div style="color: var(--flame-gold); font-size: 0.8rem; font-weight: 700;">1チーム合計（全8チーム・計80分）</div>
+            <div style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--flame-gold);">10分</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Briefing Sessions (説明会)
+         ======================================================================= -->
+    <section class="section" id="briefing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ONLINE BRIEFING</span>
+          <h2 class="section-title">事前オンライン説明会</h2>
+          <p class="section-desc">プログラムの詳細や進め方、疑問点を気軽にご相談いただけます。</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 860px; margin: 0 auto 30px;">
+          <div class="glass-card" style="padding: 30px;">
+            <span class="badge" style="margin-bottom: 8px;">第 1 回</span>
+            <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 6px;">
+              2026年10月21日(水) 19:00〜20:00
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+              平日夜開催。プログラム概要、AI活用例、チーム編成の流れを解説。質疑応答あり。
+            </p>
+            <a href="#" class="btn btn-outline-flame btn-sm" data-modal-target="modalGateEntry">参加登録する</a>
+          </div>
+
+          <div class="glass-card" style="padding: 30px;">
+            <span class="badge" style="margin-bottom: 8px;">第 2 回</span>
+            <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 6px;">
+              2026年10月24日(土) 13:00〜14:00
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">
+              休日昼開催。応募直前の方に向けて具体的なアイデア出しやチーム参加の疑問に回答。
+            </p>
+            <a href="#" class="btn btn-outline-flame btn-sm" data-modal-target="modalGateEntry">参加登録する</a>
+          </div>
+        </div>
+
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.88rem;">
+          ※日程が合わない方のために、後日アーカイブ配信も予定しております。エントリーフォームより「アーカイブ希望」をお選びいただけます。
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         FAQ Section
+         ======================================================================= -->
+    <section class="section section-darker" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FAQ // CHALLENGE GATE</span>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <div class="faq-q-text">
+                <span class="faq-q-icon">Q.</span>
+                <span>プログラミング経験やAI知識がゼロでも参加できますか？</span>
+              </div>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                まったく問題ありません！生成AIを活用することで、コードを書いたことがない方でもアイデアを形にすることができます。また、各チームに桃下村塾メンバー等のメンターが1名配置され、使い方や設計を全面的にフォローします。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div class="faq-q-text">
+                <span class="faq-q-icon">Q.</span>
+                <span>1人での個人応募は可能ですか？</span>
+              </div>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                はい、個人応募もチーム応募（2〜5名）も大歓迎です。個人応募の方は、学校・学年・専門性や興味のある課題を考慮して運営側でチーム編成をサポートします。新しい仲間と出会える貴重な機会になります。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div class="faq-q-text">
+                <span class="faq-q-icon">Q.</span>
+                <span>パソコン（PC）を持っていません。参加できますか？</span>
+              </div>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                PC所有は応募の必須条件ではありません。学校貸与端末の利用可否や所持状況をエントリー時に把握し、開始前に対応を個別に検討・サポートいたしますのでご安心ください。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div class="faq-q-text">
+                <span class="faq-q-icon">Q.</span>
+                <span>応募時にアイデアが決まっていなくても大丈夫ですか？</span>
+              </div>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                はい、具体的なアイデアが未定でも問題ありません。11月7日のDAY 1で課題発見ワークショップやアイデア創出セッションを行います。応募時に書いた課題から変更することも可能です。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div class="faq-q-text">
+                <span class="faq-q-icon">Q.</span>
+                <span>18歳未満（高校生など）の参加に必要な手続きはありますか？</span>
+              </div>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                18歳未満の方の参加にあたっては、保護者様の同意書のご提出をお願いしております。エントリー後に運営よりご案内をお送りいたします。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CTA Section
+         ======================================================================= -->
+    <section class="section cta-section">
+      <div class="container cta-box">
+        <h2 class="cta-title">
+          あなたの熱量を、岡山から世界へ。
+        </h2>
+        <p class="cta-desc">
+          募集期間：2026年10月1日 〜 10月30日 23:59<br>
+          参加枠：全8チーム（32〜40名程度）※定員に達した場合は抽選となります。
+        </p>
+
+        <div class="cta-buttons-wrapper">
+          <a href="#" class="btn btn-primary btn-lg" data-modal-target="modalGateEntry">
+            CHALLENGE GATE に申し込む（参加無料）
+          </a>
+          <a href="index.html" class="btn btn-secondary btn-lg">
+            OCS 2026 本番サミットLPを見る
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="logo">
+            <div class="logo-flame">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">OKAYAMA CHALLENGERS SUMMIT 2026</span>
+              <span class="logo-sub">岡山から、挑戦者が立ち上がる日。</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            CHALLENGE GATE は、岡山大学公認学生団体 桃下村塾が主催するU24向けの実践開発プログラムです。
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>リンク</h5>
+          <div class="footer-links">
+            <a href="index.html">OCS 2026 本番サミット総合TOP</a>
+            <a href="#about">プログラム概要</a>
+            <a href="#schedule">実施スケジュール</a>
+            <a href="#prize">賞金総額20万円</a>
+            <a href="#criteria">審査基準</a>
+            <a href="#briefing">事前説明会</a>
+            <a href="#faq">よくある質問</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>主催・お問い合わせ</h5>
+          <div class="footer-contact-info">
+            <div><strong>主催：</strong>桃下村塾（岡山大学公認学生団体）</div>
+            <div><strong>代表：</strong>越智 祐介</div>
+            <div><strong>E-mail：</strong>pn0t57el@s.okayama-u.ac.jp</div>
+            <div><strong>電話：</strong>080-8635-0801</div>
+            <div style="margin-top: 6px;"><strong>協力：</strong>おかやま地域未来共創プラットフォーム（OLIVE）</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 OKAYAMA CHALLENGERS SUMMIT 実行委員会 / 桃下村塾. All rights reserved.</div>
+        <div>CHALLENGE GATE 募集要項 v2.0 準拠 特設サイト</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Modal: CHALLENGE GATE Entry
+       ========================================================================= -->
+  <div class="modal-overlay" id="modalGateEntry">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="閉じる">&times;</button>
+      <div class="modal-header">
+        <span class="badge" style="margin-bottom: 8px;">U24対象・参加費無料</span>
+        <h3 class="modal-title">CHALLENGE GATE エントリー</h3>
+        <p class="modal-desc">
+          2026年度において24歳以下の方なら誰でも応募可能です（高校生・大学生・既卒等）。個人・チーム応募可。
+        </p>
+      </div>
+
+      <form data-simulate>
+        <div class="form-group">
+          <label class="form-label">お名前 <span class="text-cyan">*</span></label>
+          <input type="text" class="form-input" placeholder="山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">メールアドレス <span class="text-cyan">*</span></label>
+          <input type="email" class="form-input" placeholder="example@s.okayama-u.ac.jp" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">電話番号 <span class="text-cyan">*</span></label>
+          <input type="tel" class="form-input" placeholder="090-1234-5678" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">所属学校・学年またはご職業 <span class="text-cyan">*</span></label>
+          <input type="text" class="form-input" placeholder="岡山大学 工学部 2年 / ○○高校 1年 など" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">応募形式 <span class="text-cyan">*</span></label>
+          <select class="form-select" required>
+            <option value="individual">個人で応募（運営がチーム編成をサポート）</option>
+            <option value="team">チームで応募（2〜5名）</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">説明会への参加希望</label>
+          <select class="form-select">
+            <option value="none">説明会は不参加（アーカイブ配信希望）</option>
+            <option value="oct21">10月21日(水) 19:00〜20:00 オンライン説明会</option>
+            <option value="oct24">10月24日(土) 13:00〜14:00 オンライン説明会</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">関心のある課題や挑戦したいこと（任意・未定でも歓迎）</label>
+          <textarea class="form-textarea" placeholder="地域活性化、AIプロダクト、教育、農業、医療など、興味のある分野や意気込みをご自由にご記入ください。"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          CHALLENGE GATE に申し込む
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffb800" stroke-width="2.5">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <div id="toastMessage">送信が完了しました！</div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
