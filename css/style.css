@@ -1337,77 +1337,101 @@ button, input, select, textarea {
    Timetable Section
    -------------------------------------------------------------------------- */
 .timetable-container {
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 .timeline {
   position: relative;
-  padding-left: 40px;
+  padding-left: 44px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--flame-orange) 0%, var(--accent-cyan) 100%);
+  top: 15px;
+  bottom: 20px;
+  left: 16px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--flame-orange) 0%, var(--flame-gold) 70%, rgba(255, 184, 0, 0.3) 100%);
+  border-radius: 999px;
 }
 
 .timeline-row {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+}
+
+.timeline-row:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -40px;
-  top: 6px;
-  width: 32px;
-  height: 32px;
+  left: -44px;
+  top: 24px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: var(--bg-primary);
-  border: 2px solid var(--flame-orange);
+  background: #0b0f19;
+  border: 2px solid var(--flame-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
-  box-shadow: 0 0 12px rgba(255, 107, 43, 0.4);
+  box-shadow: 0 0 14px rgba(255, 107, 43, 0.45);
 }
 
 .timeline-dot-inner {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: var(--flame-gold);
+  box-shadow: 0 0 8px rgba(255, 184, 0, 0.8);
 }
 
+/* 全項目統一の洗練されたタイムテーブルカード */
 .timeline-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: rgba(14, 20, 36, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 4px solid var(--flame-gold);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
+  padding: 20px 26px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  transition: var(--trans-fast);
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  transition: all var(--trans-base);
 }
 
 .timeline-card:hover {
-  border-color: var(--border-glow);
-  background: var(--bg-card-hover);
+  border-color: rgba(255, 184, 0, 0.5);
+  border-left-color: var(--flame-orange);
+  background: rgba(22, 31, 56, 0.95);
+  box-shadow: 0 8px 30px rgba(255, 107, 43, 0.22);
+  transform: translateX(4px);
 }
 
+/* 全項目統一の視認性抜群タイムカプセルバッジ */
 .time-badge {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 107, 43, 0.12);
+  border: 1px solid rgba(255, 184, 0, 0.35);
+  border-radius: var(--radius-sm);
   color: var(--flame-gold);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 10px 18px;
   white-space: nowrap;
-  min-width: 120px;
+  min-width: 145px;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .time-content {
@@ -1415,23 +1439,19 @@ button, input, select, textarea {
 }
 
 .time-title {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 4px;
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 5px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
 }
 
 .time-desc {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-}
-
-.timeline-card.break {
-  background: rgba(255, 255, 255, 0.02);
-  border-style: dashed;
-}
-.timeline-card.break .time-badge {
-  color: var(--text-muted);
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -2115,21 +2135,30 @@ button, input, select, textarea {
   }
 
   .timeline {
-    padding-left: 24px;
+    padding-left: 28px;
   }
   .timeline::before {
-    left: 7px;
+    left: 8px;
   }
   .timeline-dot {
-    left: -24px;
+    left: -28px;
     width: 24px;
     height: 24px;
+    top: 20px;
+  }
+  .timeline-dot-inner {
+    width: 8px;
+    height: 8px;
   }
   .timeline-card {
     flex-direction: column;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 20px;
   }
   .time-badge {
     min-width: auto;
+    padding: 6px 14px;
+    font-size: 0.95rem;
   }
 }
