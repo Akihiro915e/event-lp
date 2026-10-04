@@ -415,6 +415,15 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
+.nav-link.nav-link-cg {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  padding: 2px 0;
+  letter-spacing: 0.04em;
+}
+
 .nav-link:hover,
 .nav-link.active {
   color: var(--text-primary);
